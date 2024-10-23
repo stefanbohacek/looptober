@@ -1,0 +1,63 @@
+<!--
+Source: https://codepen.io/craigstroman/pen/aOyRYx?utm_source=pocket_saves
+-->
+<div class="play-list-container m-lg-0 mx-auto">
+  <audio id="audio"
+    preload="none"
+    tabindex="0">
+    {% for track in best_of %}
+    <source src="{{ track.url }}"
+      data-track-number="{{loop.index}}" />
+    {% endfor %}
+    Your browser does not support HTML5 audio.
+  </audio>
+  <div class="player">
+    <div class="large-toggle-btn">
+      <i class="large-play-btn"><span class="screen-reader-text">Large toggle button</span></i>
+    </div>
+    <!-- /.play-box -->
+    <div class="info-box">
+      <div class="track-info-box">
+        <div class="track-title-text"></div>
+        <div class="audio-time">
+          <span class="current-time">00:00</span> /
+          <span class="duration">00:00</span>
+        </div>
+      </div>
+      <!-- /.info-box -->
+      <div class="progress-box">
+        <div class="progress-cell">
+          <div class="progress">
+            <div class="progress-buffer"></div>
+            <div class="progress-indicator"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.progress-box -->
+    <div class="controls-box">
+      <i class="previous-track-btn disabled"><span class="screen-reader-text">Previous track button</span></i>
+      <i class="next-track-btn"><span class="screen-reader-text">Next track button</span></i>
+    </div>
+    <!-- /.controls-box -->
+  </div>
+  <!-- /.player -->
+  <div class="play-list">
+    {% for track in best_of|sort(false, true, "title") %}
+    <div class="play-list-row"
+      data-track-row="{{loop.index}}">
+      <div class="small-toggle-btn">
+        <i class="small-play-btn"><span class="screen-reader-text">Small toggle button</span></i>
+      </div>
+      <div class="track-number">
+        {{loop.index}}.
+      </div>
+      <div class="track-title">
+        <a class="playlist-track"
+          href="#"
+          data-play-track="{{loop.index}}">{{ track.title }}</a>
+      </div>
+    </div>    
+    {% endfor %}
+  </div>
+</div>

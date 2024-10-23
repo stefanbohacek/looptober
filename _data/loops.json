@@ -1,0 +1,112 @@
+[
+  {
+    "year": 2024,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tiny.tilde.website/@selfsame/113235823892531340"
+      },
+      {
+        "author": "Stefan Bohacek",
+        "loops": "https://stefanbohacek.online/@stefan/113232274629368260"
+      },
+      {
+        "author": "@knoppaz@chaos.social",
+        "loops": "https://chaos.social/@knoppaz/113233876576614201"
+      },
+      {
+        "author": "@fluffy@plush.city",
+        "loops": "https://plush.city/@fluffy/113337169666317107"
+      },
+      {
+        "author": "@ranjit@friend.camp",
+        "loops": "https://friend.camp/@ranjit/113235141495950631"
+      },
+      {
+        "author": "Mike Lynch",
+        "loops": "https://aus.social/@mikelynch/113231972348416683"
+      },
+      {
+        "author": "Ella Tucker",
+        "loops": "https://ectcetera.net/music/looptober-2024/"
+      },
+      {
+        "author": "@davea@mastodon.me.uk",
+        "loops": "https://mastodon.me.uk/@davea/113262290872861940"
+      }
+    ]
+  },
+  {
+    "year": 2023,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tiny.tilde.website/@selfsame/111163298606298437"
+      },
+      {
+        "author": "Stefan Bohacek",
+        "loops": "https://stefanbohacek.com/project/looptober-2023/"
+      },
+      {
+        "author": "@knoppaz@chaos.social",
+        "loops": "https://chaos.social/@knoppaz/111161422873065127"
+      },
+      {
+        "author": "@ranjit@friend.camp",
+        "loops": "https://friend.camp/@ranjit/111162591576760788"
+      },
+      {
+        "author": "Electric Keet",
+        "loops": "https://electrickeet.com/music/Looptober%202023/"
+      }
+    ]
+  },
+  {
+    "year": 2022,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tilde.town/~selfsame/audio/looptober/2022.html"
+      },
+      {
+        "author": "@ranjit@friend.camp",
+        "loops": "https://friend.camp/@ranjit/109095668247842673"
+      }
+    ]
+  },
+  {
+    "year": 2021,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tilde.town/~selfsame/audio/looptober/2021.html"
+      },
+      {
+        "author": "@ranjit@friend.camp",
+        "loops": "https://friend.camp/@ranjit/107029587326193936"
+      }
+    ]
+  },
+  {
+    "year": 2020,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tilde.town/~selfsame/audio/looptober/2020.html"
+      },
+      {
+        "author": "@ranjit@friend.camp",
+        "loops": "https://friend.camp/@ranjit/104962397983705952"
+      }
+    ]
+  },
+  {
+    "year": 2019,
+    "loops": [
+      {
+        "author": "@selfsame@tiny.tilde.website",
+        "loops": "https://tilde.town/~selfsame/audio/looptober/2019.html"
+      }
+    ]
+  }
+]

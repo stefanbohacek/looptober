@@ -1,0 +1,32 @@
+:root {
+  --bs-heading-color: #424242 !important;
+}
+
+h1 {
+  margin-bottom: 3rem !important;
+}
+
+main{
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+img.poster {
+  width: 100%;
+  max-width: 480px;
+}
+
+footer {
+  text-wrap: balance;
+}
+
+.footer-logos {
+  max-width: 400px;
+}
+
+#back-to-top {
+  width: 10rem;
+  right: 0;
+  left: auto;
+  padding-left: 0 !important;
+}

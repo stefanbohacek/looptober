@@ -1,0 +1,11 @@
+{% for data in loops %}
+  <h2 id="{{ data.year }}" class="text-center mt-5 mb-4">
+    <a class="link-secondary" href="#{{ data.year }}">{{ data.year }}</a>
+  </h2>
+  {% for loop in data.loops %}
+    <a class="fw-bold link-secondary" href="{{loop.loops}}">{{loop.author}}</a>
+    {% if not loop.last %}
+      &middot;
+    {% endif %}
+  {% endfor %}
+{% endfor %}
