@@ -9,7 +9,7 @@ Making music loops throughout every October!
 1. Remix this project.
 2. Update the file `_data/loops.json` with links to looptober loops.
 3. Upload the "best of" tracks to the [Assets folder](https://help.glitch.com/hc/en-us/articles/16287528363789-Adding-Assets).
-4. Update the file `best_of.json` with links of the uploaded tracks.
+4. Update the file `best_of.json` with links of the uploaded tracks. Songs in the playlist will be sorted by their title.
 5. Optionally update `content/index.md` and the template files inside `_includes`.
 
 ## Attributions
