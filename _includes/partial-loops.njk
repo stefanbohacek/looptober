@@ -3,7 +3,7 @@
     <a class="link-secondary" href="#{{ data.year }}">{{ data.year }}</a>
   </h2>
   {% for loop in data.loops %}
-    <a class="fw-bold link-secondary" href="{{loop.loops}}">{{loop.author}}</a>
+    <a class="fw-bold link-secondary fs-5" href="{{loop.loops}}">{{loop.author}}</a>
     {% if not loop.last %}
       &middot;
     {% endif %}
