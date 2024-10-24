@@ -1,8 +1,8 @@
-{% for data in loops %}
+{% for data in loops|sort(true, true, "year") %}
   <h2 id="{{ data.year }}" class="text-center mt-5 mb-4">
     <a class="link-secondary" href="#{{ data.year }}">{{ data.year }}</a>
   </h2>
-  {% for loop in data.loops %}
+  {% for loop in data.loops|sort(false, true, "author") %}
     <a class="fw-bold link-secondary fs-5" href="{{loop.loops}}">{{loop.author}}</a>
     {% if not loop.last %}
       &middot;
