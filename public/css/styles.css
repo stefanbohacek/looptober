@@ -31,13 +31,17 @@ footer {
   padding-left: 0 !important;
 }
 
+body .play-list-container .play-list .play-list-row .small-toggle-btn{
+  vertical-align: sub !important;
+}
+
 body[data-bs-theme="dark"] .play-list-container{
   background-color: #6c757d !important;
 }
 
 body[data-bs-theme="dark"] .play-list-container .player .large-toggle-btn,
 body[data-bs-theme="dark"] .play-list-container .play-list .play-list-row .small-toggle-btn{
-  border-color: #6c757d !important;
+  border-color: #979797 !important;
 }
 
 body[data-bs-theme="dark"] .play-list-container .play-list .play-list-row .track-title .playlist-track{
