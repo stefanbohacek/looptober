@@ -26,10 +26,10 @@ module.exports = (eleventyConfig) => {
 
   return {
     dir: {
-      input: "content", // default: "."
-      includes: "../_includes", // default: "_includes"
-      data: "../_data", // default: "_data"
-      output: "_site",
+      input: "content",
+      includes: "../_includes",
+      data: "../_data",
+      output: "build",
     },
   };
 };

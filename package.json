@@ -1,15 +1,13 @@
 {
-  "name": "glitch-hello-eleventy",
+  "name": "looptober",
   "version": "0.1.0",
-  "description": "A simple blog, set up with Eleventy.",
+  "description": "Making musical loops throughout the month of October.",
   "scripts": {
     "start": "eleventy --serve",
     "build": "NODE_ENV=production eleventy"
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.3.5",
-    "eleventy-plugin-seo": "0.5.2",
-    "luxon": "^3.4.0",
     "markdown-it": "^14.1.0",
     "markdown-it-attrs": "^4.2.0"
   },
@@ -20,7 +18,7 @@
     "node": "14"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/glitch-hello-eleventy"
+    "url": "https://glitch.com/edit/#!/looptober"
   },
   "glitch": {
     "projectType": "generated_static"
