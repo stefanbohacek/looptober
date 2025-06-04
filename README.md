@@ -8,13 +8,13 @@ Making music loops throughout every October!
 
 1. Remix this project.
 2. Update the file `_data/loops.json` with links to looptober loops. These will be sorted by year and then alphabetically by author's name within each year.
-3. Upload the "best of" tracks to the [Assets folder](https://help.glitch.com/hc/en-us/articles/16287528363789-Adding-Assets).
-4. Update the file `best_of.json` with links of the uploaded tracks. Songs in the playlist will be sorted by their title.
+3. Add the "best of" tracks to the `public/loops` folder.
+4. Update the `best_of.json` file with relative links of the uploaded tracks. Songs in the playlist will be sorted by their title.
 5. Optionally update `content/index.md` and the template files inside `_includes`.
 
 ## Attributions
 
-This project runs on [Glitch](https://glitch.com/) and uses the following libraries, frameworks, and other tools:
+This project is hosted on [Neocities](https://neocities.org/) and uses the following libraries, frameworks, and other tools:
 
 - The [11ty](https://www.11ty.dev/) static site generator
 - The [Bootstrap](https://getbootstrap.com/) front-end library

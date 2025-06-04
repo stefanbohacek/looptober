@@ -3,167 +3,164 @@ title: Home
 ---
 
 <!DOCTYPE html>
-<html lang="en"
-  class="h-100"
-  data-bs-theme="auto">
-
-<head>
-  {% include "partial-meta.njk" %}
-  <link rel="stylesheet"
-    href="/bootstrap/bootstrap.css" />
-  <link rel="stylesheet"
-    href="/css/styles.css" />
-  <link rel="stylesheet"
-    href="{{ helpers.getProjectURL() | safe }}html5-audio-player-with-playlist/styles.css" />
-  <script type="module"
-    src="/js/main.js"
-    defer></script>
-</head>
-
-<body class="d-flex flex-column h-100">
-  <script>
-    const toggleDarkMode = (enabled) => {
-      const stickyTops = [...document.getElementsByClassName("sticky-top")];
-      if (enabled) {
-        document.body.setAttribute('data-bs-theme', 'dark');
-        if (stickyTops && stickyTops.length) {
-          stickyTops.forEach(stickyTop => {
-            stickyTop.classList.add("bg-dark");
-            stickyTop.classList.remove("bg-white");
-          });
-        }
-      } else {
-        document.body.setAttribute('data-bs-theme', 'light');
-        if (stickyTops && stickyTops.length) {
-          stickyTops.forEach(stickyTop => {
-            stickyTop.classList.add("bg-white");
-            stickyTop.classList.remove("bg-dark");
-          });
+<html lang="en" class="h-100" data-bs-theme="auto">
+  <head>
+    {% include "partial-meta.njk" %} <link rel="stylesheet" href="/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="{{ helpers.getProjectURL() | safe }}html5-audio-player-with-playlist/styles.css"/>
+    <script type="module" src="/js/main.js" defer></script>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <script>
+      const toggleDarkMode = (enabled) => {
+        const stickyTops = [...document.getElementsByClassName("sticky-top")];
+        if (enabled) {
+          document.body.setAttribute('data-bs-theme', 'dark');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-dark");
+              stickyTop.classList.remove("bg-white");
+            });
+          }
+        } else {
+          document.body.setAttribute('data-bs-theme', 'light');
+          if (stickyTops && stickyTops.length) {
+            stickyTops.forEach(stickyTop => {
+              stickyTop.classList.add("bg-white");
+              stickyTop.classList.remove("bg-dark");
+            });
+          }
         }
       }
-    }
-    if (window.matchMedia) {
-      toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    });
-  </script>
-  <main class="flex-shrink-0">
-    <h1 class="visually-hidden">Looptober</h1>
-    <div class="container mt-5">
-      <div class="row">
-        <div class="col-12 col-md-12 col-lg-6">
-          {{ content | safe }}
+      if (window.matchMedia) {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        toggleDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      });
+    </script>
+    <main class="flex-shrink-0">
+      <h1 class="visually-hidden">Looptober</h1>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-6">
+            {{ content | safe }}
+          </div>
+          <div class="col-12 col-md-12 col-lg-6">
+            {% include "partial-playlist.njk" %}
+          </div>
         </div>
-        <div class="col-12 col-md-12 col-lg-6">
-          {% include "partial-playlist.njk" %}
-        </div>
+        <p class="text-center mt-4">
+          <add-to-calendar-button
+            class="mx-auto d-inline-block"
+            name="Looptober"
+            description="Make a music loop every day."
+            location="https://looptober.neocities.org"
+            startdate="2024-10-01"
+            enddate="2024-10-31"
+            recurrence="yearly"
+            options="'Apple', 'Google', 'iCal', 'Microsoft365', 'MicrosoftTeams', 'Outlook.com', 'Yahoo'"
+            size="1"
+            hidecheckmark="true"></add-to-calendar-button>
+          <a class="fw-bold link-secondary" href="https://fediwall.social/?tags=looptober&accounts=&hide=nsfw,bots">Browse
+            #looptober</a>
+        </p>
       </div>
-      <p class="text-center mt-4">
-        <add-to-calendar-button class="mx-auto d-inline-block"
-          name="Looptober"
-          description="Make a music loop every day."
-          location="https://looptober.neocities.org"
-          startDate="2024-10-01"
-          endDate="2024-10-31"
-          recurrence="yearly"
-          options="'Apple', 'Google', 'iCal', 'Microsoft365', 'MicrosoftTeams', 'Outlook.com', 'Yahoo'"
-          size="1"
-          hideCheckmark="true"></add-to-calendar-button>
-        <a class="fw-bold link-secondary"
-          href="https://fediwall.social/?tags=looptober&accounts=&hide=nsfw,bots">Browse #looptober</a>
-      </p>
-    </div>
-    <div class="container mt-5">
-      {% include "partial-loops.njk" %}
-    </div>
-  </main>
-  <footer class="footer mt-auto py-5 ">
-    <div class="container pt-3 text-center">
-      <p class="text-body-secondary mb-0">
-        Site created by
-        <a class="link-secondary"
-          href="https://stefanbohacek.com/">Stefan Bohacek</a>
-        (<a class="link-secondary"
-          href="https://stefanbohacek.com/contact/">contact</a>)
-        with
-        <a class="link-secondary"
-          href="https://glitch.com/">Glitch</a> and
-        <a class="link-secondary"
-          href="https://www.11ty.dev/">11ty</a>.
-      </p>
-      <p class="text-body-secondary mb-0">
-        Artwork created by <a class="link-secondary"
-          href="https://tiny.tilde.website/@selfsame">@selfsame@tiny.tilde.website</a> and used with permission.
-      </p>
-      <p class="text-body-secondary mb-0">
-        <a class="link-secondary"
-          href="{{ helpers.getProjectEditURL() | safe }}">View site source</a>
-      </p>
-    </div>
-    <div class="footer-logos container mt-5">
-      <div class="row align-items-center">
-        <div class="col-4 mx-auto text-center">
-          <p>
-            <a href="https://fightfascism.glitch.me/">
-              <img class="mw-100"
-                loading="lazy"
-                title="Fight Fascism"
-                alt="A capitalized text 'Fight Fascism' in white letters on a black background."
-                src="https://cdn.glitch.global/1ab0a178-1077-48cc-9dd2-7e3671298a7c/fight-fascism-square.png">
-            </a>
-          </p>
-        </div>
-        <div class="col-4 mx-auto text-center">
-          <p>
-            <a href="https://blacklivesmatter.com/">
-              <img class="mw-100"
-                loading="lazy"
-                alt="The text 'Black Lives Matter' with each word on a new line, alternating between black text on white background and
+      <div class="container mt-5">
+        {% include "partial-loops.njk" %}
+      </div>
+    </main>
+    <footer class="footer mt-auto py-5 ">
+      <div class="container pt-3 text-center">
+        <p class="text-body-secondary mb-0">
+          Site created by
+          <a class="link-secondary" href="https://stefanbohacek.online/@stefan">Stefan Bohacek</a>
+          (<a class="link-secondary" href="https://stefanbohacek.com/contact/">contact</a>)
+                                with
+          <a class="link-secondary" href="https://neocities.org/">Neocities</a>
+          and
+          <a class="link-secondary" href="https://www.11ty.dev/">11ty</a>.
+        </p>
+        <p class="text-body-secondary mb-0">
+          Artwork created by
+          <a class="link-secondary" href="https://tiny.tilde.website/@selfsame">@selfsame@tiny.tilde.website</a>
+          and used with permission.
+        </p>
+        <p class="text-body-secondary mb-0">
+          <a class="link-secondary" href="{{ helpers.getProjectEditURL() | safe }}">View site source</a>
+        </p>
+      </div>
+      <div class="footer-logos container mt-5">
+        <div class="row align-items-center">
+          <div class="col-3 mx-auto text-center">
+            <p>
+              <a href="https://fightfascism.neocities.org">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  title="Fight Fascism"
+                  alt="A capitalized text 'Fight Fascism' in white letters on a black background."
+                  src="/images/logos/fight-fascism-square.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-3 mx-auto text-center">
+            <p>
+              <a href="https://lifehacker.com/where-to-donate-to-help-people-fighting-for-racial-just-1843852418">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  alt="The text 'Black Lives Matter' with each word on a new line, alternating between black text on white background and
                     white text on black background."
-                title="Black Lives Matter"
-                src="https://cdn.glitch.global/1ab0a178-1077-48cc-9dd2-7e3671298a7c/blm.png">
-            </a>
-          </p>
-        </div>
-        <div class="col-4 mx-auto text-center">
-          <p>
-            <a href="https://indieweb.org/">
-              <img class="mw-100"
-                loading="lazy"
-                alt="IndieWebCamp logo that consists of stylized letters IWC and the full IndieWebCamp text below."
-                title="IndieWebCamp"
-                src="https://cdn.glitch.global/1ab0a178-1077-48cc-9dd2-7e3671298a7c/indiewebcamp-black.png">
-            </a>
-          </p>
+                  title="Black Lives Matter"
+                  src="/images/logos/blm.png">
+              </a>
+            </p>
+          </div>
+          <div class="col-3 mx-auto text-center">
+            <p>
+              <a href="https://translifeline.org/donate/">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  alt="The text 'Trans rights are human rights' in all-caps, laid out to form a trans rights flag with alternating blue,
+                    pink, and white stripes."
+                  title="Trans rights are human rights!"
+                  src="/images/logos/trans-rights.jpg">
+              </a>
+            </p>
+          </div>
+          <div class="col-3 mx-auto text-center">
+            <p>
+              <a href="https://indieweb.org/">
+                <img
+                  class="mw-100"
+                  loading="lazy"
+                  alt="IndieWebCamp logo that consists of stylized letters IWC and the full IndieWebCamp text below."
+                  title="IndieWebCamp"
+                  src="/images/logos/indiewebcamp-black.png">
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <a id="back-to-top"
-      class="fixed-bottom btn btn-secondary rounded-bottom-0 d-none pl-0"
-      role="button"
-      href="#"
-      title="Back to Top">
-      <svg xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 512 512"
-        width="1em"
-        height="1em"
-        fill="currentColor">
-        <!--! Font Awesome Free 6.4.2  -->
-        <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6
+      <a
+        id="back-to-top"
+        class="fixed-bottom btn btn-secondary rounded-bottom-0 d-none pl-0"
+        role="button"
+        href="#"
+        title="Back to Top">
+        <svg
+          xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" width="1em" height="1em" fill="currentColor">
+          <!--! Font Awesome Free 6.4.2  -->
+          <path d="M233.4 105.4c12.5-12.5 32.8-12.5 45.3 0l192 192c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L256 173.3 86.6
             342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l192-192z"></path>
-      </svg>
-      <small class="fw-bold">Back to top</small>
-    </a>
-  </footer>
-  <script src="{{ helpers.getProjectURL() | safe }}add-to-calendar-button/add-to-calendar-button.min.js"
-    async
-    defer></script>
-  <script src="{{ helpers.getProjectURL() | safe }}html5-audio-player-with-playlist/script.js"
-    async
-    defer></script>
-  <script>{{ helpers.getMatomoJSSnippet() | safe }}</script>
-</body>
-
+        </svg>
+        <small class="fw-bold">Back to top</small>
+      </a>
+    </footer>
+    <script src="{{ helpers.getProjectURL() | safe }}add-to-calendar-button/add-to-calendar-button.min.js" async defer></script>
+    <script src="{{ helpers.getProjectURL() | safe }}html5-audio-player-with-playlist/script.js" async defer></script>
+    <script>{{ helpers.getMatomoJSSnippet() | safe }}</script>
+  </body>
 </html>
