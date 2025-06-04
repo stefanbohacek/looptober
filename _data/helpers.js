@@ -12,10 +12,12 @@ module.exports = {
     return response;
   },
   getProjectURL() {
-    return `https://${process.env.PROJECT_DOMAIN}.glitch.me/`;
+    // return `https://${process.env.PROJECT_DOMAIN}.glitch.me/`;
+    return "https://looptober.neocities.org/"
   },
   getProjectEditURL() {
-    return `https://glitch.com/edit/#!/${process.env.PROJECT_DOMAIN}`;
+    // return `https://glitch.com/edit/#!/${process.env.PROJECT_DOMAIN}`;
+    return "https://github.com/stefanbohacek/looptober"
   },
   sortArrayOfObjectsByKey(array, key) {
     return array.sort(function (a, b) {
