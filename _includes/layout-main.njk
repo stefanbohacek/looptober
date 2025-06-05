@@ -76,7 +76,7 @@ title: Home
           Site created by
           <a class="link-secondary" href="https://stefanbohacek.online/@stefan">Stefan Bohacek</a>
           (<a class="link-secondary" href="https://stefanbohacek.com/contact/">contact</a>)
-                                with
+                                            with
           <a class="link-secondary" href="https://neocities.org/">Neocities</a>
           and
           <a class="link-secondary" href="https://www.11ty.dev/">11ty</a>.
@@ -161,6 +161,25 @@ title: Home
     </footer>
     <script src="{{ helpers.getProjectURL() | safe }}add-to-calendar-button/add-to-calendar-button.min.js" async defer></script>
     <script src="{{ helpers.getProjectURL() | safe }}html5-audio-player-with-playlist/script.js" async defer></script>
-    <script>{{ helpers.getMatomoJSSnippet() | safe }}</script>
+    <script>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(["setExcludedQueryParams", ["token"]]);
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function () {
+        var u = "https://matomo.stefanbohacek.com/";
+        _paq.push([
+          'setTrackerUrl',
+          u + 'matomo.php'
+        ]);
+        _paq.push(['setSiteId', '28']);
+        var d = document,
+          g = d.createElement('script'),
+          s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
   </body>
 </html>
